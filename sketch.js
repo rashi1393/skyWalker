@@ -33,5 +33,6 @@ function setup() {
 }
 function draw() {
   
-
+	game.play();
+	drawSprites();
 }

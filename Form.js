@@ -1,9 +1,10 @@
 class Form{
-	constructor(){
+	constructor(game){
      
       
         this.button = createButton('PLAY');
         this.homeScreen = createSprite(displayWidth/2, displayHeight/2, displayWidth*2, displayHeight);
+        this.game=game
 	}
 
 	/*hide(){
@@ -22,10 +23,11 @@ class Form{
         
         this.button.mousePressed(()=>{
 
-        this.homeScreen.visible = false;
-       	this.button.hide();
-       	game.play();
-       	gameState = 1;
+                this.homeScreen.visible = false;
+               	this.button.hide();
+                console.log(game)
+               	this.game.play();
+               	this.game.updateGameState(1);
 
        
 

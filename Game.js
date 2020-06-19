@@ -1,12 +1,18 @@
 class Game{
   constructor(){
+    this.gameState=0;
 
   }
 
+  updateGameState(lgamestate)
+  {
+    this.gameState=lgamestate
+  }
+
  start(){
-    if(gameState === 0){
+    if(this.gameState === 0){
       
-      form = new Form();
+      form = new Form(this);
       form.display();
     }
 }
@@ -94,9 +100,7 @@ play(){
     
   }
   
-  if(button.mousePressed){
-    gameState = 1;
-  }
+  
   
   if(gameState === 1){
     homeScreen.visible = false;
